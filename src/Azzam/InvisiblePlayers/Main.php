@@ -45,7 +45,7 @@ class Main extends PluginBase implements Listener
                     $sender->sendMessage(TextFormat::RED . "Tous les joueurs ne sont plus invisibles pour vous dans le monde '".$this->world."'.");
                 }
             } else {
-                $sender->sendMessage(TextFormat::RED . "Cette commande ne peut être exécutée que par un joueur en jeu dans le monde 'event'.");
+                $sender->sendMessage(TextFormat::RED . "Cette commande ne peut être exécutée que par un joueur en jeu dans le monde '".$this->world."'.");
             }
         }
 
