@@ -35,14 +35,14 @@ class Main extends PluginBase implements Listener
 
                     $this->invisiblePlayers[$sender->getName()] = $sender;
 
-                    $sender->sendMessage(TextFormat::GREEN . "Tous les joueurs sont maintenant invisibles pour vous dans le monde 'event'.");
+                    $sender->sendMessage(TextFormat::GREEN . "Tous les joueurs sont maintenant invisibles pour vous dans le monde '".$this->world."'.");
                 } else {
                     foreach ($this->getServer()->getWorldManager()->getWorldByName("EventA")->getPlayers() as $player){
                         $sender->showPlayer($player);
                     }
 
                     unset($this->invisiblePlayers[$sender->getName()]);
-                    $sender->sendMessage(TextFormat::RED . "Tous les joueurs ne sont plus invisibles pour vous dans le monde 'event'.");
+                    $sender->sendMessage(TextFormat::RED . "Tous les joueurs ne sont plus invisibles pour vous dans le monde '".$this->world."'.");
                 }
             } else {
                 $sender->sendMessage(TextFormat::RED . "Cette commande ne peut être exécutée que par un joueur en jeu dans le monde 'event'.");
