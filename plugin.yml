@@ -1,0 +1,14 @@
+name: InvisiblePlayers
+version: 0.0.1
+api: 5.0.0
+main: Azzam\InvisiblePlayers\Main
+authors: [Azzam, Hugo]
+
+commands:
+  invisible:
+    description: Permet de mettre tout le monde invisible
+    usage: "/invisible"
+    permission: invisible
+permissions:
+  invisible:
+    default: true
